@@ -132,3 +132,9 @@ Streamlit UI Layer	Frontend interaction surface
 ### **📄 Licensing**
 
 * Refer to the MIT LICENSE file for usage and distribution terms.
+
+## Disclaimer
+### This tool accesses only publicly available information and complies with the NCSC’s public usage policies.
+### This project is an educational prototype.
+### It does not provide legal advice.
+### It is not affiliated with any government authority. 
