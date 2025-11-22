@@ -1,129 +1,134 @@
-# SWISS CYBERGUARD — Swiss Cyber Assistant
+# 🛡️ SWISS CYBERGUARD — Swiss Cyber Assistant
 
-Swiss CyberGuard is a Streamlit-powered intelligence layer engineered to operationalize Swiss cybersecurity information, regulatory insights, and compliance documentation. The solution integrates a conversational AI interface with real-time retrieval of content from the Swiss National Cyber Security Centre (NCSC), enabling users to query laws, guidelines, and threat advisories with precision.
+![Python](https://img.shields.io/badge/Python-3.9%2B-blue?style=for-the-badge&logo=python)
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit)
+![Status](https://img.shields.io/badge/Status-Prototype-orange?style=for-the-badge)
+
+**Swiss CyberGuard** is a Streamlit-driven cybersecurity intelligence layer engineered to deliver authoritative insights on Swiss cyber laws, guidelines, and real-time advisories.
+
+It fuses a conversational AI interface with contextual knowledge retrieved from the **Swiss National Cyber Security Centre (NCSC)**, enabling users to access actionable, regulation-aligned information instantly.
 
 ---
 
-## 🚀 Key Capabilities
+## 🚀 Core Value Proposition
 
-### **🔎 Conversational Cyber Assistant**
-Interactive chatbot powered by free AI API integrations (Gemini / OpenRouter).  
-Automatically augments responses with live-scraped NCSC insights.
+### **🤖 AI-Enhanced Cyber Assistant**
+* A conversational engine powered by free AI APIs (Gemini / OpenRouter).
+* Provides concise, context-aware responses to cybersecurity queries.
 
-### **📡 Live NCSC Context Integration**
-The application scrapes and extracts relevant text from the official NCSC public portal to enrich responses with Switzerland-specific cyber intelligence.
+### **🌐 Real-Time NCSC Intelligence Sync**
+* Scrapes and aggregates publicly available content from the Swiss NCSC portal.
+* Injects fresh regulatory and threat-advisory data into every response.
 
-### **📁 Compliance Circulars & Timeline Viewer**
-A dedicated module to view simulated circulars and regulatory time-series artifacts for streamlined compliance tracking.
+### **📁 Compliance Documentation Hub**
+* Dedicated interface to surface simulated circulars, directives, and regulatory timelines.
+* Enables rapid compliance readiness and traceability.
 
-### **📊 Streamlit Web Interface**
-Clear, interactive UI with two major operational modes:
-- Cyber Assistant  
-- Compliance Documentation Dashboard  
+### **🖥️ Streamlit UX**
+* Interactive, modular interface supporting:
+    * Cyber Assistant Mode
+    * Compliance Documentation Dashboard
 
 ---
 
 ## 📦 Repository Structure
 
-/.gitattributes
-/LICENSE
-/README.md
-/requirements.txt
-/switzerland_cyber_bot.py
+```text
+/
+├── .gitattributes
+├── LICENSE
+├── README.md
+├── requirements.txt
+└── switzerland_cyber_bot.py
+```
+## ⚙️ Deployment Guide
 
-yaml
-Copy code
+Follow these steps to set up the environment locally.
 
----
-
-## ⚙️ Installation & Setup
-
-### **1. Clone Repository**
+### 1. Clone Repository
 ```bash
-git clone <your-repository-url>
+git clone <your-repo-url>
 cd <your-folder>
-2. Create & Activate Virtual Environment
-bash
-Copy code
+```
+### 2. Initialize Virtual Environment
+# Create the virtual environment
+```text 
 python -m venv .venv
+```
 
-# macOS & Linux
+# Activate environment (macOS / Linux)
+```text
 source .venv/bin/activate
+```
 
-# Windows
+# Activate environment (Windows)
+```text
 .venv\Scripts\Activate.ps1
-3. Install Dependencies
-bash
-Copy code
+```
+
+### 3. Install Dependencies
+```text
 pip install -r requirements.txt
-4. Configure API Keys
-The prototype contains a hardcoded API key.
-Remove it immediately and use environment variables or Streamlit secrets.
+```
 
-Example:
+### 4. Configure Secrets (Mandatory)
+```text
+API keys = "your_gemini_key_here"
+```
 
-bash
-Copy code
-export GEMINI_API_KEY="your_gemini_key"
-export OPENAI_API_KEY="your_openai_key"
-5. Launch the App
-bash
-Copy code
+### 5. Run Application
+```text
 streamlit run switzerland_cyber_bot.py
-Application will start at:
+```
+The app will launch automatically at: http://localhost:8501
 
-arduino
-Copy code
-http://localhost:8501
-🧩 Technical Architecture
-Core Functional Modules
-Module	Description
-Gemini/Generative AI Interface	Generates conversational responses using free AI APIs
-NCSC Scraper	Real-time extraction of Swiss cybersecurity advisories
-Context Engine	Prioritizes scraped data for improved answer precision
-Compliance Dashboard	Loads static/simulated circular documents
-Streamlit UI	Frontend interface with multi-tab layout
+### **🧩 Architectural Overview**
+System Components
+Component	Description
+AI Model Interface	Uses Gemini / OpenRouter for text generation
+NCSC Scraper	Pulls live data from Swiss NCSC public pages
+Context Engine	Merges scraped intelligence into chat responses
+Compliance Viewer	Displays simulated circular documents & timelines
+Streamlit UI Layer	Frontend interaction surface
 
-Tech Stack
-Python
+### **Technology Stack**
 
-Streamlit
+* Python
+* Streamlit
+* Google Generative AI SDK
+* BeautifulSoup4
+* Pandas
+* Plotly
 
-Google Generative AI / Gemini API
+### **🛡️ Security & Operational Controls**
 
-BeautifulSoup (NCSC scraping)
+* Enforce environment-based key management
 
-Pandas
+* Ensure zero logging of user PII
 
-Plotly (timeline visualization)
+* Run scraper within acceptable access constraints
 
-🛡️ Security Best Practices
-Rotate all credentials before deployment.
+* Add rate-limiting and user throttling in production
 
-Use Streamlit Secrets or environment variables for sensitive configuration.
+* Perform periodic key rotation and secret scanning
 
-Avoid logging PII or storing chat history without user consent.
+### **📈 Product Roadmap**
+* Enhancement	Status
+* Replace simulated circulars with real PDF ingestion	Upcoming
+* Role-based access management	Under analysis
+* Vector search for NCSC content	Future iteration
+* Multi-country cyber intelligence expansion	Planned
+* Persistent conversation history with anonymization	In pipeline
+### 🤝 Contribution Model
 
-Validate that scraping respects NCSC’s public access rules.
+* Fork the repository
 
-Add rate-limiting if deploying for large user volume.
+* Create a feature branch
 
-📈 Roadmap Enhancements
-Feature	Status
-Replace simulated circulars with real PDFs	Planned
-Conversation memory (secure)	Planned
-Multi-country cyber law support	Planned
-Role-Based Access Control (RBAC)	Under evaluation
-Vector search for scraped content	Future release
+* Implement enhancements / fixes
 
-🤝 Contributing
-Fork repository
+* Submit a pull request with detailed notes
 
-Create feature branch
+### **📄 Licensing**
 
-Make improvements
-
-Submit Pull Request with detailed summary
-
-📄 License
-This repository is distributed under the terms defined in the LICENSE file.
+* Refer to the MIT LICENSE file for usage and distribution terms.
