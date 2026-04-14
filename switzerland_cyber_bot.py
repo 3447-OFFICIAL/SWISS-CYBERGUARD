@@ -5,7 +5,11 @@ import time
 import requests
 from bs4 import BeautifulSoup
 
+<<<<<<< HEAD
 HARDCODED_API_KEY = "AIzaSyAxRrytAtStIhhZdHthjU31ComiWESVqRA"
+=======
+HARDCODED_API_KEY = "your_api_key"
+>>>>>>> 7ff4773ed08f628a9e1c7b7fd193b13782bf3c96
 TARGET_URL = "https://www.ncsc.admin.ch/ncsc/en/home.html"
 
 st.set_page_config(
